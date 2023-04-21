@@ -1,4 +1,4 @@
-# Bouncing Balls
+# [Bouncing Balls](https://www.codewars.com/kata/5544c7a5cb454edb3c000047/train/ruby)
 
 A child is playing with a ball on the nth floor of a tall building. The height of this floor above ground level, *h*, is known.
 
