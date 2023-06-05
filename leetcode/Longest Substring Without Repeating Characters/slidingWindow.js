@@ -23,9 +23,9 @@ var lengthOfLongestSubstring = function(s) {
 }
 
 
-// console.log(lengthOfLongestSubstring("abcabcbb"))
-// console.log(lengthOfLongestSubstring("bbbbb"))
-// console.log(lengthOfLongestSubstring("pwwkew"))
-// console.log(lengthOfLongestSubstring("abcdefgh"))
-// console.log(lengthOfLongestSubstring(""))
-// console.log(lengthOfLongestSubstring("nfpdmpi"))
+console.log(lengthOfLongestSubstring("abcabcbb"))
+console.log(lengthOfLongestSubstring("bbbbb"))
+console.log(lengthOfLongestSubstring("pwwkew"))
+console.log(lengthOfLongestSubstring("abcdefgh"))
+console.log(lengthOfLongestSubstring(""))
+console.log(lengthOfLongestSubstring("nfpdmpi"))
