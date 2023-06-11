@@ -8,13 +8,13 @@ var isValid = function(s) {
     
     for (const character of aryCharacters) {
         if (character === "(" || character === "{" || character === "[") {
-        stack.unshift(character);
+        stack.push(character);
         } else if (character === ")" && stack[0] === "(") {
-            stack.shift();      
+            stack.pop();      
         } else if (character === "}" && stack[0] === "{") {
-            stack.shift();
+            stack.pop();
         } else if (character === "]" && stack[0] === "[") {
-            stack.shift();
+            stack.pop();
         }else{
             return false;  
         } 
