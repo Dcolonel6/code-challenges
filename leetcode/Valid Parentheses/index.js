@@ -9,11 +9,11 @@ var isValid = function(s) {
     for (const character of aryCharacters) {
         if (character === "(" || character === "{" || character === "[") {
         stack.push(character);
-        } else if (character === ")" && stack[0] === "(") {
+        } else if (character === ")" && stack[stack.length -1] === "(") {
             stack.pop();      
-        } else if (character === "}" && stack[0] === "{") {
+        } else if (character === "}" && stack[stack.length -1] === "{") {
             stack.pop();
-        } else if (character === "]" && stack[0] === "[") {
+        } else if (character === "]" && stack[stack.length -1] === "[") {
             stack.pop();
         }else{
             return false;  
@@ -22,7 +22,7 @@ var isValid = function(s) {
     return stack.length <= 0;
 };
 
-const possibilitiesOfS = ["()", "()[]{}", "(]", "[", "((" ];
+const possibilitiesOfS = ["()", "{[]}", "()[]{}", "(]", "[", "((" ];
 possibilitiesOfS.forEach((possible) => {
   console.log(`${possible} =>`, isValid(possible));
 });
