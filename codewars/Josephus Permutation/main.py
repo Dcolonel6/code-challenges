@@ -25,3 +25,17 @@ def traverse(node, k, number_of_items):
     return permutations
 
 
+def josephus(items, k):
+    if k == 1 or len(items) <= 1:
+        return items
+    current = linked_list.make_circular_linked_list(items)
+    return traverse(current, k , len(items))
+
+
+
+def main():
+    return josephus([1,2,3,4,5,6,7], 3)
+
+
+if __name__ == '__main__':
+    print(main())
