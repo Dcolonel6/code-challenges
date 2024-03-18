@@ -13,6 +13,7 @@ class TestValidBraces(unittest.TestCase):
     def test_invalid(self):
         self.assertFalse(valid_braces("(}"))
         self.assertFalse(valid_braces("[(])"))
+        self.assertFalse(valid_braces(")(}{]["))
 
 
 if __name__ == '__main__':
