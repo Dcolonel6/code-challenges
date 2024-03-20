@@ -20,3 +20,14 @@ class TestTreeByLevel(unittest.TestCase):
         self.empty_tree = tree_by_levels(None)
         self.tree = tree_by_levels(Node(Node(None, Node(None, None, 4), 2), Node(Node(None, None, 5), Node(None, None, 6), 3), 1))
 
+       self.assertIsInstance(self.empty_tree, list)
+       self.assertListEqual(self.empty_tree, [])
+    
+    def test_tree(self):
+       self.assertIsInstance(self.tree, list)
+       self.assertListEqual(self.tree, [1, 2, 3, 4, 5, 6])
+
+
+
+if __name__ == '__main__':
+    unittest.main()
