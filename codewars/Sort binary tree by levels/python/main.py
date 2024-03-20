@@ -14,7 +14,7 @@ def tree_by_levels(node):
     while len(queue):
         try:
             current = queue.pop(0)
-            values.append(current.value)
+            values = [*values, current.value]
             if current.left is not None:
                 queue = [*queue, current.left]
             if current.right is not None:
