@@ -1,3 +1,10 @@
+class Node:
+    def __init__(self, L=None, R = None, n =None):
+        self.left = L
+        self.right = R
+        self.value = n
+
+
 def tree_by_levels(node):
     if node is None:
         return []
