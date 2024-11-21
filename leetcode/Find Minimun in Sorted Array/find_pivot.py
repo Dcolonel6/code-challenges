@@ -1,6 +1,6 @@
 from typing import List
 class Solution:
-    def find_pivot(self, nums:List[int]) -> List[int]:
+    def find_pivot(self, nums:List[int]) -> int:
         n = len(nums)
         low_index = 0
         high_index = n-1
@@ -14,7 +14,7 @@ class Solution:
                 low_index = mid + 1
             else:
                 high_index = mid
-        return [low_index, high_index]
+        return nums[low_index]
 
 if __name__ == "__main__":
     s = Solution().find_pivot([7,8,9,1,2,3,4,5,6])
