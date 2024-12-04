@@ -24,11 +24,27 @@ class Solution:
 
         # if left_parentheses and right_parentheses are equal, then we have balanced everything
         result = "".join(string_builder)
+        print(result, "=>", result[::-1])
         if left_parentheses == right_parentheses:
             return result
         else:
             # we have too many opening parentheses and need to discard them
             # we shall be greedy with closing parentheses and selective with opening ones
-            for letter in string_builder[::-1]:
-                if char == ")":
-                    pass
+            res_builder = []
+            for letter in result[::-1]:
+                if letter == ")":
+                    #right_parentheses -= 1
+                    res_builder.append(letter)
+                elif letter == "(":
+                    # accept only if closing parentheses count is < than opening parentheses
+                    left_parentheses -= 1
+                    if right_parentheses > left_parentheses:
+                        res_builder.append(letter)
+                else:
+                    res_builder.append(letter)
+
+        return "".join(reversed(res_builder))
+
+
+if __name__ == "__main__":
+    print(Solution().make_remove_invalid("(a(b(c)d)"))
