@@ -1,6 +1,6 @@
 
 class Solution:
-    def make_remove_invalid(self, s:str) -> str:
+    def make_remove_invalid(self, s: str) -> str:
         left_parentheses = 0
         right_parentheses = 0
 
@@ -24,7 +24,7 @@ class Solution:
 
         # if left_parentheses and right_parentheses are equal, then we have balanced everything
         result = "".join(string_builder)
-        print(result, "=>", result[::-1])
+
         if left_parentheses == right_parentheses:
             return result
         else:
@@ -33,10 +33,10 @@ class Solution:
             res_builder = []
             for letter in result[::-1]:
                 if letter == ")":
-                    #right_parentheses -= 1
+                    # right_parentheses -= 1
                     res_builder.append(letter)
                 elif letter == "(":
-                    # accept only if closing parentheses count is < than opening parentheses
+                    # accept only if closing parentheses count is > than opening parentheses
                     left_parentheses -= 1
                     if right_parentheses > left_parentheses:
                         res_builder.append(letter)
