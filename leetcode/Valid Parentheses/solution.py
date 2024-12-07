@@ -1,7 +1,7 @@
 
 
 class Solution:
-    def is_valid(self,s:str):
+    def is_valid(self, s: str):
         pairs = {")":"(", "}": "{", "]":"["}
         stack = []
 
@@ -20,6 +20,7 @@ class Solution:
                     # we have too many closing brackets
                     return False
         return False if stack else True
+
 
 if __name__ == "__main__":
     print(Solution().is_valid("]"))
