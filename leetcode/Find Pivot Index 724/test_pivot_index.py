@@ -16,6 +16,12 @@ class MyTestCase(unittest.TestCase):
     def test_case3(self):
         self.assertEqual(self.pivot_index([1, 2, 3]), -1)  # add assertion here
 
+    def test_case4(self):
+        self.assertEqual(self.pivot_index([2,3,-1,8,4]), 3)  # add assertion here
+
+    def test_case5(self):
+        self.assertEqual(self.pivot_index([1,-1,4]), 2)  # add assertion here
+
 
 if __name__ == '__main__':
     unittest.main()
