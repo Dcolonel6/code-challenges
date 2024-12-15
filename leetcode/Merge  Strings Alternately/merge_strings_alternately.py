@@ -12,7 +12,8 @@ class Solution:
         return combined_string
 
 
-
-
 if __name__ == "__main__":
     print(Solution().mergeAlternately("ab", "pqrs"))
+
+
+
