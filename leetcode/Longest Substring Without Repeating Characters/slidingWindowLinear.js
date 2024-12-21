@@ -7,7 +7,9 @@ var lengthOfLongestSubstring = function(s) {
 
     for(let rghtPointer = 0; rghtPointer < s.length; rghtPointer++){
         const char = s[rghtPointer]                
-        if(Object.hasOwn(tracker, char) && tracker[char] >= leftPointer) leftPointer = tracker[char] + 1      
+        if(Object.hasOwn(tracker, char) && tracker[char] >= leftPointer){
+            leftPointer = tracker[char] + 1
+        }
         tracker[char] = rghtPointer                         
         max = Math.max(max, rghtPointer - leftPointer + 1)
     }
