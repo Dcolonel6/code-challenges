@@ -1,4 +1,4 @@
-const bfs = (s) => {
+ const bfs = (s) => {
     const queue = s.split("")
     const alreadyVisited = new Set()    
     while(queue.length){
