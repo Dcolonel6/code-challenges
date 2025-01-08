@@ -5,7 +5,7 @@ from solution import Solution
 class MyTestCase(unittest.TestCase):
 
     def setUp(self):
-        self.longest_substr = Solution().lengthOfLongestSubstring
+        self.longest_substr = Solution().length_of_longest_substring_diff_approach
 
     def test_case1(self):
         self.assertEqual(self.longest_substr("abcabcbb"), 3)  # add assertion here

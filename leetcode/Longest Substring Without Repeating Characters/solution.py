@@ -1,10 +1,25 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        length = len(s)
+        max_length = 0
+        tracker = {}
+        left = 0
+
+        for index, letter in enumerate(s):
+            window = index - left + 1
+            while letter in tracker:
+                left_letter = s[left]
+                tracker.pop(left_letter)
+                left += 1
+            tracker[letter] = index
+            max_length = max(max_length, window)
+        return max_length
+
+    def length_of_longest_substring_diff_approach(self, s: str) -> int:
+        max_length = 0
         tracker = {}
         left = 0
         index = 0
-        max_length = 0
+        length = len(s)
         substr = []
 
         while index < length:
@@ -23,5 +38,7 @@ class Solution:
 
 
 if __name__ == "__main__":
-    print(Solution().lengthOfLongestSubstring("abcabcbb"))
+    print(Solution().length_of_longest_substring_diff_approach("abcabcbb"))
+
+
 
