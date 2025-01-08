@@ -22,7 +22,6 @@ class Solution:
         low = 0
         high = n - 1
 
-
         while low <= high:
             mid = (low + high) // 2
             mid_value = ary[mid]
@@ -61,10 +60,12 @@ class Solution:
         # after the loop, both the low and high pointer will converge to minvalue
         return low
 
+
 def main():
     s = Solution()
     # print(f"binary search: {s.binary_search([1,2,3,4,5,6,7,8,9], 9)}")
-    print(s.search([4,5,6,7,0,1,2],0))
+    print(s.search([4, 5, 6, 7, 0, 1, 2], 0))
+
 
 if __name__ == "__main__":
     main()
