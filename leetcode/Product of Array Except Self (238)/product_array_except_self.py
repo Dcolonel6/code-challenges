@@ -27,4 +27,4 @@ class Solution:
 
 
 if __name__ == "__main__":
-    print(Solution().product_except_self([-1,1,0,-3,3]))
+    print(Solution().product_except_self([-1, 1, 0, -3, 3]))
