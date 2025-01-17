@@ -52,5 +52,5 @@ class Solution:
 
 
 if __name__ == "__main__":
-    print(Solution().minimum_window("a", "a"))
+    print(Solution().minimum_window("cabwefgewcwaefgcf", "cae"))
 
