@@ -5,12 +5,13 @@ class Solution:
         left = 0
 
         for index, letter in enumerate(s):
-            window = index - left + 1
+
             while letter in tracker:
                 left_letter = s[left]
                 tracker.pop(left_letter)
                 left += 1
             tracker[letter] = index
+            window = index - left + 1
             max_length = max(max_length, window)
         return max_length
 
@@ -39,6 +40,7 @@ class Solution:
 
 if __name__ == "__main__":
     print(Solution().length_of_longest_substring_diff_approach("abcabcbb"))
+    print(Solution().lengthOfLongestSubstring("abcabcbb"))
 
 
 
