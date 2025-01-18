@@ -8,7 +8,10 @@ class MyTestCase(unittest.TestCase):
         self.find_anagrams = Solution().find_anagrams
 
     def test_case1(self):
-        self.assertEqual(True, False)  # add assertion here
+        self.assertEqual(self.find_anagrams("cbaebabacd", "abc"), [0, 6])  # add assertion here
+
+    def test_case2(self):
+        self.assertEqual(self.find_anagrams("abab","ab"), [0, 1, 2])  # add assertion here
 
 
 if __name__ == '__main__':
