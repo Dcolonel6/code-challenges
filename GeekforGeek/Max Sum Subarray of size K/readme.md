@@ -1,6 +1,6 @@
 # [Max Sum Subarray of size K](https://www.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/)
 
-Given an array of integers **arr[]**  and a number **k**. Return the **maximum sum** of a subarray of size k.
+Given an array of integers **arr[]**  and a number **k**. Return the **maximum sum** of a subarray of size k.  
 
 Note: A subarray is a contiguous part of any given array.
 
