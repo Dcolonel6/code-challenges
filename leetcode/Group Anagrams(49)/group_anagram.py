@@ -7,7 +7,7 @@ class GroupAnagram:
     def group_anagrams(self, strs: List[str]) -> List[List[str]]:
         tracker = {}
         for index, word in enumerate(strs):
-            product_prime = self.anagram_prime_fctors(word)
+            product_prime = self.alphabet_mapped(word)
             if product_prime in tracker:
                 tracker[product_prime] = tracker[product_prime] + [word]
             else:
@@ -26,6 +26,16 @@ class GroupAnagram:
         for letter in str1:
             product *= primes[letter]
         return product
+
+    def alphabet_mapped(self, word):
+        alphabet_ary = [0] * 26
+
+        for letter in word:
+            index = ord(letter) - ord("a")
+            alphabet_ary[index] += 1
+
+        return tuple(alphabet_ary)
+
 
 
 if __name__ == "__main__":
