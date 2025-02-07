@@ -39,4 +39,4 @@ class GroupAnagram:
 
 
 if __name__ == "__main__":
-    print(GroupAnagram().groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+    print(GroupAnagram().group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
