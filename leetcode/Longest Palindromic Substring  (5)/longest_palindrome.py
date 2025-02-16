@@ -50,7 +50,7 @@ class Solution:
 
 if __name__ == "__main__":
     # print(Solution().length_palindrome("babad")) # "bab"
-    print(Solution().length_palindrome("ac")) # "noon"
+    print(Solution().length_palindrome("racecar")) # "noon"
 
 
 
