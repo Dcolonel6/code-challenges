@@ -5,7 +5,7 @@ from two_sum import Solution
 class MyTestCase(unittest.TestCase):
 
     def setUp(self):
-        self.two_sum = Solution().two_sum
+        self.two_sum = Solution().two_sum_binary_search
 
     def test_case1(self):
         self.assertEqual(self.two_sum([2, 7, 11, 15], 9), [1, 2])
