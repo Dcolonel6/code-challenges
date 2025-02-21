@@ -12,7 +12,7 @@ class Solution:
             else:
                 tracker[difference] = index
 
-    def two_sum_binary_search(self, numbers:List[int], target: int) -> int:
+    def two_sum_binary_search(self, numbers:List[int], target: int) -> List[int]:
         length = len(numbers)
         left, right = 0, length - 1
 
