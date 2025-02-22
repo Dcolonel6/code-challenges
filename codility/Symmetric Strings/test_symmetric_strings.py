@@ -5,7 +5,8 @@ from symmetric_strings import Solution
 class MyTestCase(unittest.TestCase):
 
     def setUp(self):
-        self.symetric = Solution().solution
+        self.symetric = Solution().longest_symmetric_substring
+
     def test_case1(self):
         self.assertEqual(self.symetric("<<<>>>"), 6)  # add assertion here
 
