@@ -1,29 +1,32 @@
 class Solution:
     def longest_symmetric_substring(self, s: str) -> int:
         n = len(s)
+
+        n = len(s)
         max_length = 0
 
-        # Iterate over all possible even-length substrings
-        for mid in range(1, n):
-            left, right = mid - 1, mid
-            left_count, right_count = 0, 0
-
-            while left >= 0 and right < n:
-                if s[left] in {'<', '?'}:
+        # Try each possible midpoint (between characters)
+        for mid in range(n + 1):
+            # For each midpoint, extend to both sides checking validity
+            # Maximum possible left length from this midpoint
+            left_count = 0
+            for i in range(mid - 1, -1, -1):
+                if s[i] == '<' or s[i] == '?':
                     left_count += 1
                 else:
                     break
 
-                if s[right] in {'>', '?'}:
+            # Maximum possible right length from this midpoint
+            right_count = 0
+            for i in range(mid, n):
+                if s[i] == '>' or s[i] == '?':
                     right_count += 1
                 else:
                     break
 
-                if left_count == right_count:
-                    max_length = max(max_length, right - left + 1)
-
-                left -= 1
-                right += 1
+            # The symmetric substring length is limited by the minimum of left and right counts
+            current_length = 2 * min(left_count, right_count)
+            max_length = max(max_length, current_length)
 
         return max_length
 
