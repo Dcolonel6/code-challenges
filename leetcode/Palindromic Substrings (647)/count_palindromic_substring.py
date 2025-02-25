@@ -27,7 +27,7 @@ class Solution:
                 left -= 1
                 right += 1
 
-            if right + radii[index] > previous_biggest_right_boundary:
+            if index + radii[index] > previous_biggest_right_boundary:
                 previous_biggest_center = index
                 previous_biggest_right_boundary = index + radii[index]
 
