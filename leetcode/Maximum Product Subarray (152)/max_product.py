@@ -10,7 +10,6 @@ class Solution:
         current_min  = current_max = 1
         results = max(nums)
 
-
         for num in nums:
 
             # check if its zero
