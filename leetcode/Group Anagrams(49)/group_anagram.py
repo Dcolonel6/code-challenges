@@ -15,6 +15,7 @@ class GroupAnagram:
         return list(tracker.values())
 
     def anagram_prime_fctors(self, str1: str) -> int:
+        # maps with primes only
         primes = {
             'a': 2, 'b': 3, 'c': 5, 'd': 7, 'e': 11,
             'f': 13, 'g': 17, 'h': 19, 'i': 23, 'j': 29,
