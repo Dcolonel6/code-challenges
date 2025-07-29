@@ -1,7 +1,5 @@
 from typing import List
 
-from dns.resolver import resolve
-
 
 # solved using kadane's variation in dynamic programming
 
